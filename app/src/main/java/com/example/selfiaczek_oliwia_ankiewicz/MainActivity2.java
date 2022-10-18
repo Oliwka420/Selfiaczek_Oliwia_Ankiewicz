@@ -26,9 +26,14 @@ public class MainActivity2 extends AppCompatActivity {
         SeekBar rotate2 = findViewById(R.id.rotateY);
         SeekBar rotate = findViewById(R.id.rotate);
         SeekBar opacity = findViewById(R.id.Opacity);
+        SeekBar r = findViewById(R.id.r);
+        SeekBar g = findViewById(R.id.g);
+        SeekBar b = findViewById(R.id.b);
+        ImageView zielony = findViewById(R.id.zielony);
+        ImageView czerwony = findViewById(R.id.czerwony);
+        ImageView niebieski = findViewById(R.id.niebieski);
         opacity.setProgress(255);
-
-
+        //ROTACJA ZDJECIA
         rotate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
@@ -39,7 +44,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {img.setRotation(seekBar.getProgress());}
         });
-
+        //ROTACJA KĄT NACHYLENIA X
         rotate1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
@@ -50,7 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {img.setRotationX(seekBar.getProgress());}
         });
-
+        //ROTACJA KĄT NACHYLENIA Y
         rotate2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
@@ -61,7 +66,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {img.setRotationY(seekBar.getProgress());}
         });
-
+        //PRZEZROCZYSTOSC
         opacity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
@@ -71,6 +76,36 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {img.setAlpha(seekBar.getProgress());}
+        });
+        r.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {czerwony.setAlpha(seekBar.getProgress());}
+        });
+        g.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {zielony.setAlpha(seekBar.getProgress());}
+        });
+        b.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {niebieski.setAlpha(seekBar.getProgress());}
         });
     }
 }

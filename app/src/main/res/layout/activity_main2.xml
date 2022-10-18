@@ -7,11 +7,33 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
     android:orientation="vertical">
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
 <ImageView
-    android:layout_gravity="center"
     android:layout_width="500px"
     android:layout_height="500px"
     android:id="@+id/img"/>
+    <ImageView
+        android:id="@+id/niebieski"
+        android:src="@drawable/niebeiski"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        />
+    <ImageView
+        android:id="@+id/czerwony"
+        android:src="@drawable/czerwony"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        />
+    <ImageView
+        android:id="@+id/zielony"
+        android:src="@drawable/zielony"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        />
+
+  </RelativeLayout>
   <SeekBar
       android:id="@+id/rotateX"
       android:layout_width="match_parent"
@@ -29,6 +51,21 @@
       android:max="360" />
   <SeekBar
       android:id="@+id/Opacity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:max="255" />
+  <SeekBar
+      android:id="@+id/r"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:max="255" />
+  <SeekBar
+      android:id="@+id/g"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:max="255" />
+  <SeekBar
+      android:id="@+id/b"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:max="255" />
