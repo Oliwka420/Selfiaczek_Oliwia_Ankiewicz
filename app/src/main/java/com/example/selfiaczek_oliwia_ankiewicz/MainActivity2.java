@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
@@ -26,12 +27,15 @@ public class MainActivity2 extends AppCompatActivity {
         SeekBar rotate2 = findViewById(R.id.rotateY);
         SeekBar rotate = findViewById(R.id.rotate);
         SeekBar opacity = findViewById(R.id.Opacity);
-        SeekBar r = findViewById(R.id.r);
-        SeekBar g = findViewById(R.id.g);
-        SeekBar b = findViewById(R.id.b);
+        SeekBar r = findViewById(R.id.red);
+        SeekBar g = findViewById(R.id.green);
+        SeekBar b = findViewById(R.id.blue);
         ImageView zielony = findViewById(R.id.zielony);
         ImageView czerwony = findViewById(R.id.czerwony);
         ImageView niebieski = findViewById(R.id.niebieski);
+        czerwony.setVisibility(View.INVISIBLE);
+        niebieski.setVisibility(View.INVISIBLE);
+        zielony.setVisibility(View.INVISIBLE);
         opacity.setProgress(255);
         //ROTACJA ZDJECIA
         rotate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -85,7 +89,9 @@ public class MainActivity2 extends AppCompatActivity {
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {czerwony.setAlpha(seekBar.getProgress());}
+                                          boolean fromUser) {
+                czerwony.setVisibility(View.VISIBLE);
+                czerwony.setAlpha(seekBar.getProgress());}
         });
         g.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -95,7 +101,8 @@ public class MainActivity2 extends AppCompatActivity {
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {zielony.setAlpha(seekBar.getProgress());}
+                                          boolean fromUser) {zielony.setVisibility(View.VISIBLE);
+            zielony.setAlpha(seekBar.getProgress());}
         });
         b.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -105,7 +112,10 @@ public class MainActivity2 extends AppCompatActivity {
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {niebieski.setAlpha(seekBar.getProgress());}
+                                          boolean fromUser) {
+                niebieski.setVisibility(View.VISIBLE);
+                niebieski.setAlpha(seekBar.getProgress());
+                }
         });
     }
 }
