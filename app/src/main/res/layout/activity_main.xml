@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/odcien6">
 
     <ImageView
         android:layout_width="match_parent"
@@ -12,20 +13,22 @@
         android:layout_weight="1"
         android:id="@+id/img"
         />
+
     <Button
-        android:backgroundTint="@color/black"
-        android:hint="ZROB PHOTO"
-        android:textColorHint="@color/roz_papieski"
+        android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn"
-        android:textStyle="bold"/>
+        android:backgroundTint="@color/odcien3"
+        android:hint="ZROB PHOTO"
+        android:textColorHint="@color/odcien2"
+        android:textStyle="bold" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn2"
-        android:backgroundTint="@color/black"
-        android:textColorHint="@color/roz_papieski"
+        android:backgroundTint="@color/odcien3"
+        android:textColorHint="@color/odcien2"
         android:hint="PRZEJDZ DO EDYCJI"
         android:textStyle="bold"/>
 
