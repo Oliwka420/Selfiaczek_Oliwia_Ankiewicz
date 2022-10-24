@@ -5,68 +5,213 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/odcien6">
   <RelativeLayout
+      android:paddingTop="30dp"
       android:layout_gravity="center"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
-<ImageView
-    android:layout_width="400px"
-    android:layout_height="500px"
-    android:id="@+id/img"/>
+      android:layout_height="wrap_content"
+      android:paddingBottom="30dp">
     <ImageView
+
+        android:layout_width="400px"
+        android:layout_height="500px"
+        android:id="@+id/img"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+    <ImageView
+
         android:id="@+id/niebieski"
         android:src="@drawable/niebeiski"
         android:layout_width="400px"
         android:layout_height="500px"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
         />
+    <ImageView
+        android:id="@+id/czerwony"
+        android:layout_width="400px"
+        android:layout_height="500px"
+        android:src="@drawable/czerwony"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
 
-      <ImageView
-          android:id="@+id/czerwony"
-          android:layout_width="400px"
-          android:layout_height="500px"
-          android:src="@drawable/czerwony" />
-
-      <ImageView
-          android:id="@+id/zielony"
-          android:layout_width="400px"
-          android:layout_height="500px"
-          android:src="@drawable/zielony" />
+    <ImageView
+        android:id="@+id/zielony"
+        android:layout_width="400px"
+        android:layout_height="500px"
+        android:src="@drawable/zielony"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
 
   </RelativeLayout>
-  <SeekBar
-      android:id="@+id/rotateX"
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:max="50" />
-  <SeekBar
-      android:id="@+id/rotateY"
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      android:gravity="center_vertical"
+      >
+    <TextView
+        android:paddingLeft="20dp"
+        android:width="120dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/odcien4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate X: " />
+    <SeekBar
+        android:progressDrawable="@drawable/customseekbar"
+        android:thumb="@drawable/thumb"
+        android:id="@+id/rotateX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"/>
+  </LinearLayout>
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:max="50" />
-  <SeekBar
-      android:id="@+id/rotate"
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      android:gravity="center_vertical">
+    <TextView
+        android:paddingLeft="20dp"
+        android:width="120dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/odcien4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate Y: " />
+    <SeekBar
+        android:progressDrawable="@drawable/customseekbar"
+        android:thumb="@drawable/thumb"
+        android:id="@+id/rotateY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50" />
+  </LinearLayout>
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:max="360" />
-  <SeekBar
-      android:id="@+id/Opacity"
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      android:gravity="center_vertical">
+    <TextView
+        android:paddingLeft="20dp"
+        android:width="120dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/odcien4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate: " />
+    <SeekBar
+        android:progressDrawable="@drawable/customseekbar"
+        android:thumb="@drawable/thumb"
+        android:id="@+id/rotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="360" />
+  </LinearLayout>
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:max="255" />
-  <SeekBar
-      android:id="@+id/red"
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      android:gravity="center_vertical">
+    <TextView
+        android:paddingLeft="20dp"
+        android:width="120dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/odcien4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opacity: " />
+    <SeekBar
+        android:layout_weight="1"
+        android:progressDrawable="@drawable/customseekbar"
+        android:thumb="@drawable/thumb"
+        android:id="@+id/Opacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255" />
+  </LinearLayout>
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:max="255" />
-  <SeekBar
-      android:id="@+id/green"
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      android:gravity="center_vertical">
+    <TextView
+        android:paddingLeft="20dp"
+        android:width="120dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/odcien4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red filter: " />
+    <SeekBar
+        android:layout_weight="1"
+        android:progressDrawable="@drawable/customseekbar"
+        android:thumb="@drawable/thumb"
+        android:id="@+id/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255" />
+  </LinearLayout>
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:max="255" />
-  <SeekBar
-      android:id="@+id/blue"
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      android:gravity="center_vertical">
+    <TextView
+        android:paddingLeft="20dp"
+        android:width="120dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/odcien4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green filter: " />
+    <SeekBar
+        android:layout_weight="1"
+        android:progressDrawable="@drawable/customseekbar"
+        android:thumb="@drawable/thumb"
+        android:id="@+id/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255" />
+  </LinearLayout>
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:max="255" />
+      android:orientation="horizontal"
+      android:layout_weight="1"
+      android:gravity="center_vertical">
+    <TextView
+        android:paddingLeft="20dp"
+        android:width="120dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/odcien4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue filter: " />
+    <SeekBar
+        android:layout_weight="1"
+        android:progressDrawable="@drawable/customseekbar"
+        android:thumb="@drawable/thumb"
+        android:id="@+id/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255" />
+  </LinearLayout>
   </LinearLayout>

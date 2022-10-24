@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
+    <color name="odcien4">#627c91</color>
+    <color name="odcien5">#a595d0</color>
+    <color name="odcien6">#2f495e</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="roz_papieski">#FF0080</color>
+    <color name="odcien1">#8e57f7</color>
+    <color name="odcien2">#c69bf5</color>
+    <color name="odcien3">#202e5e</color>
+    <color name="purple_500">#ff0080</color>
+    <color name="purple_700">#ff0080</color>
+    <color name="purple_200">#ff0080</color>
 </resources>
